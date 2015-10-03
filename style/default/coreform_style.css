@@ -1,0 +1,20 @@
+.coreformtablestyle {	background-color:#CCCCCC;border:1px solid black;font-size:.9em;padding: 2px;	}
+.coreformtablestyle td, .coreformtablestyle th { padding: 2px; }
+.coreformtext {font-family:Arial, Helvetica, sans-serif; font-size:90%;}
+.corefield_button {	font-family: Verdana, Arial, Helvetica, sans-serif;	font-weight: bold;}
+.corefield_select {	font-family: Verdana, Arial, Helvetica, sans-serif; }
+.corefield_text {	font-family: Verdana, Arial, Helvetica, sans-serif;}
+.corefield_textarea {	font-family: Verdana, Arial, Helvetica, sans-serif;}
+.coreformtable { background-color:#CCCCCC; 	border:1px solid black;}
+.errorMsg { color:crimson;font-weight:bold;font-size:110%; font-family:Arial, Helvetica, sans-serif; }
+.corefirstrow {background-color:#FFFFFF; }
+.coresecondrow {background-color:#eff4f6; }
+.coretabletoprow {background-color: #AAA2F2; }
+.corefield_popupheader {  width:150; background:#FFCC00; border:1px solid #333333;font-weight:bold;padding:2px; color:#CC0000; font-family:Arial, Helvetica, sans-serif;
+		font-size:80%;}
+.corefield_popupbody {  width:150; background:#FFFFFF; border-left:1px solid #333333; border-right:1px solid #333333; 
+		border-bottom:1px solid #333333;padding:2px;font-family:Arial, Helvetica, sans-serif; font-size:80%;}
+.coretablestyle {	background:#666666; border:1px solid black;font-size:.8em;	}
+.coretablestyle td, .coreformtablestyle th { padding: 2px; }
+.fibreLikertTable {background-color:#fff; 	border:1px solid silver;}
+.fibreLikertTable td, .fibreLikertTable th { text-align:center; padding-left: 10px;padding-right: 10px; border-bottom: 1px solid silver;}

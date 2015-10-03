@@ -1,0 +1,40 @@
+.coreformtablestyle {
+	background-color:#FFE0C1;
+	border: 2px solid black;
+	font-size: 80%;
+	font-family: Arial, Helvetica, sans-serif;
+	}
+.coreformtext {font-family:Arial, Helvetica, sans-serif; font-size:90%;}
+
+.corefield_button {
+	font-weight: bold;
+	color: #990000;
+	background-color: #FF9900;
+	border: 2px solid black;
+}
+.corefield_select {
+	color: #990000;
+	background-color: #FFFFCC;
+	border: 1px solid black;
+}
+.corefield_text {
+	color: #990000;
+	background-color: #FFFFCC;
+	border: 1px solid black;
+}
+.corefield_textarea {
+	color: #990000;
+	background-color: #FFFFCC;
+	border: 1px solid black;
+}
+.coreformtable { 
+	background-color: #FFE0C1; 
+	border:3px solid black;
+}
+.errorMsg { color:crimson;font-weight:bold;font-size:110%; font-family:Arial, Helvetica, sans-serif; }
+.corefirstrow {background-color:#FFFFFF; }
+.coresecondrow {background-color: #FDE78E; }
+.coretabletoprow {background-color:#FF6600; }
+.corefield_popupheader {  width:150; background:#FFCC00; border:1px solid #333333;font-weight:bold;padding:2px; color:#CC0000; font-family:Arial, Helvetica, sans-serif;		font-size:80%;}
+.corefield_popupbody {  width:150; background:#FFFFFF; border-left:1px solid #333333; border-right:1px solid #333333; border-bottom:1px solid #333333;padding:2px;font-family:Arial, Helvetica, sans-serif; font-size:80%;}
+

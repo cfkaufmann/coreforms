@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>coreForm Field Help</title>
+<style type="text/css">
+<!--
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+td {background-color:#FFFFFF;}
+th {background-color: #99CCFF; }
+-->
+</style>
+
+
+</head>
+
+<body>
+<h2>coreForm:</h2>
+<p>The custom tag wrapped around everything. </p>
+<table border="0" cellspacing="1" cellpadding="2" bgcolor="#333333">
+	<tr>
+        <th>Attribute</th>
+        <th>Required?</th>
+        <th>Description</th>
+    </tr>
+	<tr>
+        <td>formname</td>
+        <td>required</td>
+        <td>name of form </td>
+    </tr>
+    <tr>
+        <td>template</td>
+        <td>required</td>
+        <td>If you are using cfmodule syntax. </td>
+    </tr>
+    <tr>
+        <td>maketable</td>
+        <td>optional</td>
+        <td>defaulted to No (N), select Yes (Y) if you want the tag to automatically generate a table for your form. </td>
+    </tr>
+    <tr>
+        <td>debug</td>
+        <td>optional</td>
+        <td>defaulted to No (N). Select if you want debuging information shown at the bottom of the form. </td>
+    </tr>
+    <tr>
+        <td>queryinput</td>
+        <td>optional </td>
+        <td>Use this tag if you want to automatically insert values into your fields, like if you wanted to edit an existing record. It would be the name of the Query called on the page. </td>
+    </tr>
+    <tr>
+        <td>allowfile</td>
+        <td>optional</td>
+        <td>Use this tag if you are going to do file uploads. It adds the attribute 'enctype=&quot;multipart/form-data&quot;' to the form tag. </td>
+    </tr>
+    <tr>
+      <td>wysiwygeditor</td>
+      <td>optional</td>
+      <td>Use this tag if you want to convert all of your textarea fields into WYSIWYG fields. This pulls <a href="http://tinymce.moxiecode.com/">TinyMCE</a> onto your forms. If you want to change the buttons that <a href="http://tinymce.moxiecode.com/">TinyMCE</a> shows, you have to change the config files of <a href="http://tinymce.moxiecode.com/">TinyMCE</a>.</td>
+    </tr>
+</table>
+<h2>coreField:</h2>
+<table border="0" cellspacing="1" cellpadding="2" bgcolor="#333333">
+	<tr>
+        <th>Attribute</th>
+        <th>Required?</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>fieldname</td>
+        <td>required</td>
+        <td>The name you want to give the field. If you are using the QueryInput attribute of the Coreform, you need to name it the same as the database field. </td>
+    </tr>
+    <tr>
+        <td>template</td>
+        <td>required </td>
+        <td>If you are using cfmodule syntax. </td>
+    </tr>
+    <tr>
+        <td>required</td>
+        <td>optional</td>
+        <td>defaulted to No. Specify Yes if you would like the field to be required. </td>
+    </tr>
+    <tr>
+        <td>format</td>
+        <td>required</td>
+        <td><p>You can specify the same as the html forms. The following are supported: <strong>text</strong>, <strong>textarea</strong>, <strong>radio</strong>, <strong>select</strong>, 
+	  	    <strong>checkbox, file</strong>, and <strong>submit</strong>.  </p>
+            <p>There are additional formats:
+		<ul>
+		<li><strong>date:</strong> validates that  the input is a valid date</li>
+		<li><strong>calendar:</strong> validates that the input is a date and also provides a calendar popup to select the date</li>
+		<li><strong>int:</strong> validates the input is a number</li>
+		<li><strong>email:</strong> checks to see if the input has a "@" symbol in it at the text after the @ has at least one period</li>
+		<li><strong>time: </strong>puts three fields onto your form for hour, minute, and AM or PM </li>
+		<li><strong>fckeditor:</strong> if you have fckeditor installed correctly, it will load an instance of fckeditor </li>
+		<li><strong>usstates:</strong> gives you a select box with all the United States states in it.</li>
+		<li><strong>countries:</strong> gives you a select box with all the countries in the world. Specifically, the country names (official short names in English) in alphabetical order as given in ISO 3166-1 and the corresponding ISO 3166-1-alpha-2 code elements.</li>
+		<li><strong>cancel:</strong> adds a cancel button.  When using this you also need to use the location tag to tell the browser where to go when clicked.</li>
+		</ul>	  </td>
+    </tr>
+    <tr>
+        <td>caption</td>
+        <td>optional</td>
+        <td><p>provides a way of naming the field more easily in the error statement. </p>
+        <p><strong>If you are using the MAKETABLE option, this field is required.  </strong></p></td>
+    </tr>
+    <tr>
+        <td>standalone</td>
+        <td>optional</td>
+        <td>If you are specifying a queryinput, all the fields look for a field in the query. If you specify <strong>Y</strong> for this attribute it will stop the tag looking for a field. </td>
+    </tr>
+    <tr>
+        <td>default</td>
+        <td>optional</td>
+        <td>Sets a default value to a field. </td>
+    </tr>
+    <tr>
+        <td>size</td>
+        <td>optional</td>
+        <td>just like the size attribute in the html input tag. </td>
+    </tr>
+    <tr>
+        <td>minvalue</td>
+        <td>optional</td>
+        <td>Only for use when the format is set to <strong>Int</strong>, <strong>Date</strong> or <strong>Calendar</strong>. Validation checking for the <strong>Int</strong> to see if the value entered is smaller than the value specified in this attribute.  For the <strong>Date</strong> or <strong>Calendar</strong>, it checks to see if the date entered is smaller than the value specified in this attribute. </td>
+    </tr>
+    <tr>
+        <td>maxvalue</td>
+        <td>optional</td>
+        <td>Only for use when the format is set to <strong>Int</strong>, <strong>Date</strong> or <strong>Calendar</strong>. Validation checking for the <strong>Int</strong> to see if the value entered is larger than the value specified in this attribute. For the <strong>Date</strong> or <strong>Calendar</strong>, it checks to see if the date entered is larger than the value specified in this attribute. </td>
+    </tr>
+    <tr>
+        <td>maxlength</td>
+        <td>optional</td>
+        <td>For all string values (text, textarea, email, fckeditor), checks to see if the character count is greater than the value specified in this attribute.</td>
+    </tr>
+    <tr>
+        <td>minlength</td>
+        <td>optional</td>
+        <td>For all string values (text, textarea, email, fckeditor), checks to see if the character count is smaller than the value specified in this attribute.</td>
+    </tr>
+    <tr>
+        <td>showtip</td>
+        <td>optional</td>
+        <td>Default is No. Only works for the Calendar and date at the moment, if you select Yes, it shows you the proper number format. </td>
+    </tr>
+    <tr>
+        <td>valuelist</td>
+        <td>optional</td>
+        <td>For use with Radio, Select and Checkbox. Allows you to provide a list of values.</td>
+    </tr>
+    <tr>
+        <td>displaylist</td>
+        <td>optional</td>
+        <td><p>For use with Radio, Select and Checkbox. Allows you to provide labels to the values. </p>
+        <p>If you use the Valuelist and not the displaylist, it shows the valuelist values as the labels. </p></td>
+    </tr>
+    <tr>
+        <td>queryname</td>
+        <td>optional</td>
+        <td>For use with Radio, Select and Checkbox.</td>
+    </tr>
+    <tr>
+        <td>valuecolumn</td>
+        <td>optional</td>
+        <td>For use with Radio, Select and Checkbox when you are using the queryname attribute. Specify the fieldname of the query you would like to use as the value. </td>
+    </tr>
+    <tr>
+        <td>displaycolumn</td>
+        <td>optional</td>
+        <td>For use with Radio, Select and Checkbox when you are using the queryname attribute. Specify the fieldname of the query you would like to use as the label. </td>
+    </tr>
+    <tr>
+        <td>blankselection</td>
+        <td>optional</td>
+        <td>For use with select box only. Provides a default selection with no value, you can enter information like &quot; - select one -&quot;. </td>
+    </tr>
+    <tr>
+        <td>rows</td>
+        <td>optional</td>
+        <td>For use only with a Textarea. Default is 50 </td>
+    </tr>
+    <tr>
+        <td>cols</td>
+        <td>optional</td>
+        <td>For use only with a Textarea. Default is 10 </td>
+    </tr>
+    <tr>
+        <td>width</td>
+        <td>optional</td>
+        <td>For use only with the fckeditor. Default is 100% </td>
+    </tr>
+    <tr>
+        <td>height</td>
+        <td>optional</td>
+        <td>For use only with the fckeditor. Default is 300 </td>
+    </tr>
+    <tr>
+        <td>toolbar</td>
+        <td>optional</td>
+        <td>For use only with the FCKeditor. Default is &quot;Default&quot;. Specify whatever toolbar set you would like to use for that instance of FCKeditor. </td>
+    </tr>
+    <tr>
+      <td>minuteinterval</td>
+      <td>optional</td>
+      <td>For use with the <strong>time</strong> format. So you can change the dropdown options for the minute increments. For example if you enter 1 the minutes 1 through 60 will show. If you specify 5, then the minutes will increase by 5's. </td>
+    </tr>
+	<tr>
+		<td>location</td>
+		<td>optional</td>
+		<td>Use this tag when using format='cancel' to tell the browser where to go when the cancel button is pressed.</td>
+	</tr>
+</table>
+<h2>coreRule</h2>
+<table border="0" cellspacing="1" cellpadding="2" bgcolor="#333333">
+	<tr>
+        <th>Attribute</th>
+        <th>Required?</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>template</td>
+        <td>required </td>
+        <td>If you are using cfmodule syntax. </td>
+    </tr>
+    <tr>
+        <td>rule</td>
+        <td>required</td>
+        <td>specify the rule you would need to generate an error. An example would be if you were verifying the user entered the same thing in two different text boxes (password verification when changing), you would specify &quot;password1 neq password2&quot;. If this were true it would generate an error. </td>
+    </tr>
+    <tr>
+        <td>caption</td>
+        <td>required</td>
+        <td>The error message you want displayed when an error has been generated. </td>
+    </tr>
+</table>
+<h2>&nbsp;</h2>
+<h2>Initial Setup:</h2>
+<p>You need to specify this in your &quot;application.cfm&quot; file:</p>
+<p>&lt;!--- include the coreForm stuff ---&gt;<br />
+  &lt;cfset coreformstyle = &quot;SkyBlue&quot;&gt;   &lt;!--- OrangeBreeze, SkyBlue ---&gt;<br />
+  &lt;cfinclude template=&quot;/coreforms/coreFormIncludes.cfm&quot;&gt;<br />
+&lt;!--- include the coreForm stuff ---&gt;</p>
+<p>&nbsp;</p>
+<h2>Bottom of Form </h2>
+<p>&lt;cfif isdefined('form.coreformaction') and request.isformvalid eq &quot;OK&quot;&gt;</p>
+<p>    - - - Whatever action you want to do now that the form validates. - - -</p>
+<p>&lt;/cfif&gt;<br />
+</p>
+<p>&nbsp;</p>
+<p><br />
+    <br />
+</p>
+</body>
+</html>
+
